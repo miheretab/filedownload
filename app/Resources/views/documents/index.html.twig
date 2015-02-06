@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<a href="{{path('documents_add')}}" >Add Document</a>	
+    <table>
+		<thead>
+			<tr>
+				<th>File</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for document in documents %}
+			<tr>
+				<td>{{document.name|e}}.{{document.path|e}}</td>
+				<td>
+					<a href="{{path('documents_view', { 'id': document.id })}}" target="blank" >View</a>
+					| <a href="{{document.getWebPath()}}" target="blank" >Download</a>
+				</td>
+			</tr>		
+			{% endfor %}
+		</tbody>
+	<table>
+{% endblock %}

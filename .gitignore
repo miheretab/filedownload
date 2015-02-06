@@ -1,0 +1,3 @@
+web/uploads/documents/*
+app/cache
+vendor

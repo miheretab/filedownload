@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div ng-app="" ng-controller="personController">
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
+
+<p ng-bind="name"></p>
+
+</div>
+{% endblock %}

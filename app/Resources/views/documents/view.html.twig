@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table>
+		<thead>
+			<tr>
+				<th>File</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{document.name|e}}.{{document.path|e}}</td>
+				<td><a href="{{document.getWebPath()}}" target="blank" >Download</a></td>
+			</tr>
+		</tbody>
+	<table>
+{% endblock %}

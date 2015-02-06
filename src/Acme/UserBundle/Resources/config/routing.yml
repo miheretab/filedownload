@@ -1,0 +1,6 @@
+acme_user_homepage:
+    path:     /profile
+    defaults: { _controller: AcmeUserBundle:Default:index }
+acme_user_registration:
+    path:     /register
+    defaults: { _controller: AcmeUserBundle:Default:register }
